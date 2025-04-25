@@ -1,0 +1,51 @@
+[16]  # Version number. Do not delete.
+
+[[workspace]]
+# These directories and files will be scanned when a workspace is opened so that search etc. works.
+D:\Jmacklin - Spare Drive\DEV\Odin Projects\Tetris
+D:\Jmacklin - Spare Drive\apps\odin
+
+[ignore]
+
+# Files and directories matching the following wildcards will not be loaded or descended into
+# Example:
+# tmp* - will ignore any files or directories which start with 'tmp'
+# C:/project/dirname/** - will ignore everything under `dirname`
+# C:/project/dirname/*  - will ignore all files under `dirname`, but not recursively
+*.exe
+*.js
+.git
+OLS
+D:\Jmacklin - Spare Drive\apps\odin\**build.bat
+
+[[build commands]]
+build_working_dir:      D:\Jmacklin - Spare Drive\DEV\Odin Projects\Tetris
+open_panel_on_build:    true  #  <- any settings specified here will apply to all commands unless overridden
+# close_panel_on_success: false
+
+[Debug Build]
+build_working_dir: D:\Jmacklin - Spare Drive\DEV\Odin Projects\Tetris
+build_command: build.bat
+key_binding: Ctrl-Shift-B
+
+
+
+
+[Debug Build And Run]   # <- command name. Can be arbitrary
+build_command:          build.bat  # should be an executable or a script
+build_working_dir:      D:\Jmacklin - Spare Drive\DEV\Odin Projects\Tetris\
+timeout_in_seconds:     5             # if you don't want a timeout, don't specify it
+run_command:            Tetris.exe      # will be run if build succeeds
+run_working_dir:        D:\Jmacklin - Spare Drive\DEV\Odin Projects\Tetris\build\
+key_binding:            F5
+
+[Run]                   # <- You could have commands that don't build anything and just run something
+run_command:            Tetris.exe
+run_working_dir:        D:\Jmacklin - Spare Drive\DEV\Odin Projects\Tetris\build\
+key_binding:            Ctrl-F5
+
+[Release]
+build_command:          build_release.bat
+key_binding:            F9
+
+
